@@ -16,5 +16,5 @@ void LedDriver_TurnOn(unsigned int ledNumber) {
     *ledAddress |= convertLedNumberToBit(ledNumber);
 }
 void LedDriver_TurnOff(unsigned int ledNumber) {
-    *ledAddress = 0;
+    *ledAddress &= ~(convertLedNumberToBit(ledNumber));
 }
