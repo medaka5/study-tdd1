@@ -34,3 +34,7 @@ void LedDriver_TurnAllOn(void) {
     setLedImage(ALL_LEDS_ON);
 }
 
+void LedDriver_TurnAllOff(void) {
+    setLedImage(ALL_LEDS_OFF);
+}
+
