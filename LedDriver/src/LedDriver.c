@@ -18,3 +18,6 @@ void LedDriver_TurnOn(unsigned int ledNumber) {
 void LedDriver_TurnOff(unsigned int ledNumber) {
     *ledAddress &= ~(convertLedNumberToBit(ledNumber));
 }
+void LedDriver_TurnAllOn(void) {
+    *ledAddress = 0xFFFF;
+}
