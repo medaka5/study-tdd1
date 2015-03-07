@@ -14,5 +14,4 @@ TEST_TEAR_DOWN(LedDriver)
 }
 TEST(LedDriver, AllOffAfterCreate)
 {
-	TEST_FAIL_MESSAGE("Start here");
 }
