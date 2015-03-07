@@ -20,3 +20,5 @@ TEST(LedDriver, AllOffAfterCreate)
     LedDriver_Create(&virtualleds);
     TEST_ASSERT_EQUAL_HEX16(0, virtualleds);
 }
+
+
