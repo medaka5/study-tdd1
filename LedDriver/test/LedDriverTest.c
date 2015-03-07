@@ -57,9 +57,16 @@ TEST(LedDriver, TurnOffAnyLed)
     LedDriver_TurnOff(9);
     TEST_ASSERT_EQUAL_HEX16(0xFEFF, virtualleds);
 }
-TEST(LedDriver, LedMemoryIsNotReadable)
+TEST(LedDriver, LedMemoryIsNotReadableWhenOn)
 {
     virtualleds = 0xFFFF;
     LedDriver_TurnOn(2);
     TEST_ASSERT_EQUAL_HEX16(0x0002, virtualleds);
+}
+TEST(LedDriver, LedMemoryIsNotReadableWhenOff)
+{
+    LedDriver_TurnAllOn();
+    virtualleds = 0x0000;
+    LedDriver_TurnOff(2);
+    TEST_ASSERT_EQUAL_HEX16(0xFFFD, virtualleds);
 }
