@@ -35,3 +35,8 @@ TEST(LedDriver, TurnOffLed1)
     LedDriver_TurnOff(1);
     TEST_ASSERT_EQUAL_HEX16(0x0000, virtualleds);
 }
+TEST(LedDriver, TurnOnLed2)
+{
+    LedDriver_TurnOn(2);
+    TEST_ASSERT_EQUAL_HEX16(0x0002, virtualleds);
+}
