@@ -6,7 +6,7 @@ UNITY_INC=-I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 
 TARGET=all_tests
 
-SRC_FILES1=$(UNITY_SRC) test/LedDriverTest.c test/LedDriverTestRunner.c test/all_tests.c
+SRC_FILES1=$(UNITY_SRC) test/LedDriverTest.c test/LedDriverTestRunner.c test/all_tests.c src/LedDriver.c
 
 all:
 	$(CC) $(CFLAGS) $(UNITY_INC) -Isrc $(SRC_FILES1) -o $(TARGET)
