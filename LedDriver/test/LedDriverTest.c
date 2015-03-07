@@ -22,11 +22,21 @@ TEST(LedDriver, AllOffAfterCreate)
 }
 
 
-TEST(LedDriver, CreateAndOn1)
+TEST(LedDriver, TurnOnLed1)
 {
     uint16_t virtualleds = 0xFFFF;
     LedDriver_Create(&virtualleds);
     TEST_ASSERT_EQUAL_HEX16(0, virtualleds);
     LedDriver_TurnOn(1);
     TEST_ASSERT_EQUAL_HEX16(0x0001, virtualleds);
+}
+
+TEST(LedDriver, TurnOffLed1)
+{
+    uint16_t virtualleds = 0xFFFF;
+    LedDriver_Create(&virtualleds);
+    TEST_ASSERT_EQUAL_HEX16(0, virtualleds);
+    LedDriver_TurnOn(1);
+    LedDriver_TurnOff(1);
+    TEST_ASSERT_EQUAL_HEX16(0x0000, virtualleds);
 }

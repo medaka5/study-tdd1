@@ -12,3 +12,6 @@ void LedDriver_Destroy(void) {
 void LedDriver_TurnOn(unsigned int ledNumber) {
     *ledAddress = 1;
 }
+void LedDriver_TurnOff(unsigned int ledNumber) {
+    *ledAddress = 0;
+}
