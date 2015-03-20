@@ -1,5 +1,5 @@
 
-UNITY_ROOT=$(HOME)/Unity-master
+UNITY_ROOT=$(HOME)/tools/Unity
 UNITY_SRC=$(UNITY_ROOT)/src/unity.c $(UNITY_ROOT)/extras/fixture/src/unity_fixture.c
 UNITY_INC=-I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 
